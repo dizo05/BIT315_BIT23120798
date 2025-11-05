@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="home1.css">
+        <script src="home.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 onclick="location.href='home.html'">UNILUS</h1>
+        </div>
+<div class="topnav">
+    <button onclick="toggleSidebar()" class="menu-btn">☰</button>
+    <h2>HOME</h2>
+    <section class="welcome">
+        <p id="dateTime"></p>
+    </section>
+</div>
+<div class="leftcolumn" id="sidebar">
+    <h1>Current User: BIT23120798</h1>
+    <img src="IMG_0751.JPG" alt="Profile Photo">
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="inspiration.html">Inspirations</a></li>
+
+  <li class="dropdown">
+    <button class="dropbtn">Results ▾</button>
+    <div class="dropdown-content">
+      <a href="year1.html">Year 1</a>
+      <a href="year2.html">Year 2</a>
+      <a href="year3.html">Year 3</a>
+      <a href="year4.html">Year 4</a>
+    </div>
+  </li>
+
+  <li><a href="gallery.html">Gallery</a></li>
+</ul>
+<button class="logout-btn" onclick="location.href='index.html'">Logout</button>
+</div>
+
+<main>
+  <div class="top-section">
+  <section class="welcome-message">
+    <h2 id="greeting"></h2>
+    <p id="greetingSub"></p>
+  </section>
+  <section class="slideshow">
+    <div class="slideshow-container">
+      <div class="slides"><img src="IMG_2135 2.jpeg" alt="unilus1" onclick="location.href='gallery.html'"></div>
+      <div class="slides"><img src="IMG_2151.jpeg" alt="unilus2" onclick="location.href='gallery.html'"></div>
+      <div class="slides"><img src="IMG_2187 2.jpeg" alt="unilus3" onclick="location.href='gallery.html'"></div>
+      <div class="slides"><img src="IMG_2274.jpeg" alt="unilus4" onclick="location.href='gallery.html'"></div>
+      <div class="slides"><img src="IMG_2441 2.jpeg" alt="unilus5" onclick="location.href='gallery.html'"></div>
+      <div class="slides"><img src="IMG_2459 2.jpeg" alt="unilus5" onclick="location.href='gallery.html'"></div>
+      <p id="gallery-intro" onclick="location.href='gallery.html'">View Gallery</p>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a> 
+<a class="next" onclick="plusSlides(1)">❯</a>      
+   </div>
+  </section>
+  </div>
+
+  <section class="bio">
+    <img src="IMG_0751.JPG" alt="Profile Photo">
+         <p>My Name is <b>Dingaane Miti</b>. But people call me <b>Dizo</b>. <br>
+          I am a Student at the University of Lusaka. 
+          I am pursuing a Bachelor of Science in Information Systems and Technology. 
+          I love Photography and Graphic Design. I usually work 
+          on projects like branding, logo design, social media design, poster design, and 
+          layouting. I am passionate about pushing the boundaries of design and exploring new skills.</p>
+        <a href="profile.html" class="btn1">View Profile</a>
+
+  </section>
+<div class="row">
+  <section class="results">
+        <h3>Registered Courses</h3>
+    <table onclick="location.href='profile.html'">
+        <tr>
+          <th>Course Code</th>
+          <th>Course Name</th>
+        </tr>
+        <tr>
+          <td>BBA260</td>
+          <td>Research Methods</td>
+        </tr>
+        <tr>  
+          <td>BIT316</td>
+          <td>Project Management</td>
+        </tr>
+        <tr>
+          <td>BIT323</td>
+          <td>Introduction to Business Systems Analysis</td>
+        </tr>
+        <tr>
+          <td>BIT315</td>
+          <td>Introduction to Business Web Application Development</td>
+        </tr>
+        <tr>
+          <td>BIT352</td>
+          <td>Big Data and Data Warehousing</td>
+        </tr>
+    </table>
+
+  </section>
+
+
+  <section class="video1">
+    <h2>Website Walkthrough</h2>
+    <video controls width="500">
+      <source src="vid.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+</main>
+            <footer>
+                <p>&copy; 2025 Dingaane Miti. All rights reserved.</p>
+            </footer>
+<script>
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  sidebar.classList.add("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    sidebar.classList.contains("active") &&
+    !sidebar.contains(e.target) &&
+    e.target !== menuBtn
+  ) {
+    sidebar.classList.remove("active");
+  }
+});
+
+function setGreeting() {
+    const now = new Date();
+    const hour = now.getHours();
+    let greetingText;
+
+    if (hour < 12) {
+        greetingText = "Good morning, Dingaane!";
+        subText = "Hope your day starts off great.";
+    } else if (hour < 18) {
+        greetingText = "Good afternoon, Dingaane!";
+        subText = "Keep up the great work today.";
+      } else {
+        greetingText = "Good evening, Dingaane!";
+        subText = "Relax and unwind, you've earned it.";
+    }
+
+    document.getElementById("greeting").textContent = greetingText;
+    document.getElementById("greetingSub").textContent = subText;
+}
+
+setGreeting();
+;
+
+</script>
+    </body>
+</html>

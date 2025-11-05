@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inspirations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="inspiration.css">
+        <script src="home.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 onclick="location.href='home.html'">UNILUS</h1>
+        </div>
+<div class="topnav">
+    <button onclick="toggleSidebar()" class="menu-btn">☰</button>
+    <h2>INSPIRATIONS</h2>
+    <section class="welcome">
+        <p id="dateTime"></p>
+    </section>
+</div>
+<div class="leftcolumn" id="sidebar">
+    <h1>Current User: BIT23120798</h1>
+    <img src="IMG_0751.JPG" alt="Profile Photo">
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="inspiration.html">Inspirations</a></li>
+  <li class="dropdown">
+    <button class="dropbtn">Results ▾</button>
+    <div class="dropdown-content">
+      <a href="year1.html">Year 1</a>
+      <a href="year2.html">Year 2</a>
+      <a href="year3.html">Year 3</a>
+      <a href="year4.html">Year 4</a>
+    </div>
+  </li>
+
+  <li><a href="gallery.html">Gallery</a></li>
+</ul>
+<button class="logout-btn" onclick="location.href='index.html'">Logout</button>
+</div>
+
+<div class="intro">
+    <p id="inspiration-title"></p>
+</div>
+
+<div class="container">
+    <div class="card" onclick="openModal(
+      ['IMG_4342.JPG', 'IMG_4388.JPG', 'IMG_4390.JPG'],
+      'Dmitry Bivol',
+       'Dmitry Yuryevich Bivol, born 18 December 1990 is a Russian professional boxer. He won the undisputed light-heavyweight title in February 2025, and has held the unified championship since April 2025, as well as the International Boxing Organization (IBO) and Ring magazine titles since February 2025. Previously, he held the World Boxing Association WBA light-heavyweight title Super version from 2019 to 2024. He also held the IBO title during his first reign as champion. Dmitry Bivol inspires me with his discipline, composure, and relentless focus. He shows me that success isn’t about noise or shortcuts, but about patience, consistency, and proving yourself through action.')">
+        <h2>Dmitry Bivol</h2>
+        <img src="IMG_4342.JPG" alt="image1" >
+        <p><b>Undisputed light-heavyweight champion.</b><br> 24-1-0</p>
+    </div>
+        <div class="card" onclick="openModal( 
+        ['IMG_4344.JPG', 'IMG_4343.JPG', 'IMG_4384.JPG'],
+        'Usain Bolt',
+         'Usain St. Leo Bolt, born 21 August 1986, is a Jamaican former sprinter who is widely considered to be the greatest sprinter of all time. He is a world record holder in the 100 metres, 200 metres and 4 × 100 metres relay. His achievements on the track have earned him the nickname Lightning Bolt. Usain Bolt inspires me with his confidence, charisma, and ability to perform under pressure. He shows me that being the best requires not just talent, but also a positive mindset, joy in what you do, and the courage to stand out.')">
+        <h2>Usain Bolt</h2>
+        <img src="IMG_4344.JPG" alt="image2" >
+        <p><b>Fastest man on the Planet.</b><br>Ran 100m in 9.58s</p>
+    </div>
+    <div class="card" onclick="openModal(
+      ['IMG_4351.JPG', 'IMG_4387.JPG', 'IMG_4389.JPG'],
+      'Cillian Murphy',
+      'Cillian Murphy, born 25 May 1976, is an Irish actor and producer. He is known for his versatile roles in film and television, including his performances in Peaky Blinders, Inception, and Dunkirk. Murphy has received critical acclaim for his work, including BAFTA and Academy Award nominations. He inspires me with his dedication to his craft, his ability to inhabit complex characters, and his commitment to telling meaningful stories.')">
+        <h2>Cillian Murphy</h2>
+        <img src="IMG_4351.JPG" alt="image3" >
+        <p><b>Irish Actor & Producer</b><br>BAFTA & Academy Award for best actor</p>
+    </div>
+    <div class="card" onclick="openModal(
+      ['IMG_4346.JPG', 'IMG_4385.JPG', 'IMG_4386.JPG'],
+      'Muhammad Ali',
+      'Muhammad Ali, born Cassius Marcellus Clay Jr. on January 17, 1942, was an American professional boxer and cultural icon. He is widely regarded as one of the greatest boxers of all time. Ali was known for his quick footwork, lightning-fast jabs, and ability to float like a butterfly, sting like a bee. He inspires me with his courage, conviction, and commitment to social justice. Ali showed the world that true greatness comes from standing up for what you believe in, both inside and outside the ring.')">
+        <h2>Muhammad Ali</h2>
+        <img src="IMG_4346.JPG" alt="image4" >
+        <p><b>Greatest heavyweight boxer of all time.</b><br>56-5-0</p>
+    </div>
+    <div class="card" onclick="openModal(
+      ['IMG_625.JPG', 'IMG_3081.jpeg', 'IMG_0802.jpeg'],
+      'Col Edmond Miti',
+      'Colonel Edmond Miti, born 30 May 1961, was a retired Colonel of the Zambia Army. Col Miti held various appointments, with the last one being Wing Commander at the Officers Wing at the Military training establishment of Zambia, Regional Commander  in Kasama, Northen Province, and course officer at Zambia Military Academy. He was known for his leadership, discipline, and dedication to service. My father was known for his commitment to excellence, his ability to lead by example, and his unwavering integrity. He showed me that true leadership is about serving others, standing firm in your values, and making a positive impact in your community. Thus making him my NUMBER ONE inspiration.')">
+        <h2>Col Edmond Miti</h2>
+        <img src="IMG_625.JPG" alt="image5">
+        <p><b>Retired Colonel, Zambia Army.</b><br>Former Regional Commander, Northern Province.</p>
+    </div>
+
+</div>
+<div id="inspirationModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-img" id="modalImg"><br>
+  <div class="modal-content">
+    <h2 id="modalName"></h2>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+<footer>
+    <p>&copy; 2024 Dingaane Miti. All rights reserved.</p>
+  </footer>
+    </body>
+<script>
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  sidebar.classList.add("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    sidebar.classList.contains("active") &&
+    !sidebar.contains(e.target) &&
+    e.target !== menuBtn
+  ) {
+    sidebar.classList.remove("active");
+  }
+});
+
+let modalIndex = 0;
+let modalSlides = [];
+let modalTimer;
+
+function openModal(images, name, desc) {
+  modalSlides = images;
+  modalIndex = 0;
+  document.getElementById("inspirationModal").style.display = "block";
+  document.getElementById("modalName").textContent = name;
+  document.getElementById("modalDesc").textContent = desc;
+  showModalSlide(modalIndex);
+  modalTimer = setInterval(nextModalSlide, 3000); 
+}
+
+function closeModal() {
+  document.getElementById("inspirationModal").style.display = "none";
+  clearInterval(modalTimer);
+}
+
+function showModalSlide(n) {
+  document.getElementById("modalImg").src = modalSlides[n];
+}
+
+function nextModalSlide() {
+  modalIndex = (modalIndex + 1) % modalSlides.length;
+  showModalSlide(modalIndex);
+}
+
+window.onclick = function(e) {
+  const modal = document.getElementById("inspirationModal");
+  if (e.target === modal) closeModal();
+}
+const text = "Here are some of the people whose lives and work continue to inspire my journey every day.";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("inspiration-title").textContent += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 50); 
+  }
+}
+
+window.onload = typeEffect;
+
+</script>
+
+</html>

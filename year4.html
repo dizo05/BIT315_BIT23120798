@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="year.css">
+        <script src="home.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 onclick="location.href='home.html'">UNILUS</h1>
+        </div>
+        <div class="topnav">
+            <button onclick="toggleSidebar()" class="menu-btn">☰</button>
+            <h2>4th Year Results</h2>
+            <section class="welcome">
+                <p id="dateTime"></p>
+            </section>
+        </div>
+<div class="leftcolumn" id="sidebar">
+    <h1>Current User: BIT23120798</h1>
+    <img src="IMG_0751.JPG" alt="Profile Photo">
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="registration.html">Registration</a></li>
+
+  <li class="dropdown">
+    <button class="dropbtn">Results ▾</button>
+    <div class="dropdown-content">
+      <a href="year1.html">Year 1</a>
+      <a href="year2.html">Year 2</a>
+      <a href="year3.html">Year 3</a>
+      <a href="year4.html">Year 4</a>
+    </div>
+  </li>
+
+  <li><a href="gallery.html">Gallery</a></li>
+</ul>
+<button class="logout-btn" onclick="location.href='index.html'">Logout</button>
+</div>
+            <div class="grid-container">
+                <section class="yr-sem">
+                <h2>4th Year, 1st Semester</h2>
+                    <table>
+                <p>Results Unavailable!!</p>
+                 </table>
+                 <p><strong>GPA:</strong> N/A</p>
+                 <p><strong>Completed Credits:</strong> N/A</p>
+                </section>    
+                <section class="yr-sem2">
+                    <h2>4th Year, 2nd Semester</h2>
+                    <table>
+                    <p>Results Unavailable!!</p>
+                    </table>    
+                    <p><strong>GPA:</strong> N/A</p>
+                    <p><strong>Completed Credits:</strong> N/A</p>
+                     <p><strong>Total Completed Credits:</strong> N/A</p>
+                     <p><strong>Cumulative GPA:</strong> N/A</p>
+
+                </section>      
+            </div>
+                        <script>
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  sidebar.classList.add("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    sidebar.classList.contains("active") &&
+    !sidebar.contains(e.target) &&
+    e.target !== menuBtn
+  ) {
+    sidebar.classList.remove("active");
+  }
+});
+
+</script>
+            <footer>
+                <p>&copy; 2025 Dingaane Miti. All rights reserved</p>
+            </footer>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio Login</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js"></script>
+</head>
+<body>
+<div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="nav">
+    <div class="logo">UNILUS</div>
+    <div class="links">
+      <a href="https://www.instagram.com/_unknown.bot_?igsh=YWdkZXFlcjc3NWJw&utm_source=qr">Instagram</a>
+      <a href="http://www.facebook.com/share/19sigCPFx3/?mibextid=wwXIfr">Facebook</a>
+    </div>
+  </div>
+
+  <div class="form-container">
+    <h4>WELCOME</h4>
+    <h2>STUDENT PROFILE<span class="dot">.</span></h2>
+    <p class="login-text">Login</p>
+
+    <form onsubmit="return validateLogin(event)">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required>
+      </div>
+
+      <div class="options">
+        <label>
+          <input type="checkbox" id="remember"> Remember me
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="btn-primary" >Login</button>
+      </div>
+    </form>
+      <div id="error-message"></div>
+  </div>
+  <div class="footer">
+    <img src="unilus-logo-3.png" alt="logo">
+  </div>
+</body>
+</html>

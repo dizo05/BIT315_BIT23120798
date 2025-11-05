@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  background: url("IMG_2441\ 2.jpeg") no-repeat center center/cover;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #1a363669, #1A3636);
+  z-index: -1;
+}
+
+
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  right: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.nav .logo {
+  font-weight: bold;
+    font-size: 18px;
+  color: #D6BD98;
+}
+
+.nav .links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.nav .links a:hover {
+  color: #D6BD98;
+}
+
+.form-container {
+  background: #1a36366c;
+  padding: 40px;
+  border-radius: 16px;
+  margin-left: 60px;
+  margin-top: 200px;
+  width: 400px;
+  height: 500px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+.form-container h4 {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.form-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.form-container .dot {
+  color: #D6BD98;
+}
+
+.form-container .login-text {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.form-container .login-text a {
+  color: #40534C;
+  text-decoration: none;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #aaa;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #40534C;
+  background: #1a3636aa;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-group input::placeholder {
+  color: #555;
+}
+
+.input-group input:focus {
+  border: 1px solid #D6BD98;
+}
+
+.options {
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.options input {
+  margin-right: 6px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-primary{
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #40534C, #677D6A);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #D6BD98, #1A3636);
+}
+
+#error-message {
+  margin-top: 10px;
+  color: #ff6b6b;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer img{
+  position: absolute;
+  bottom: 25px;
+  left: 95%;
+  transform: translateX(-50%);
+  width: 100px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    min-height: 100vh;
+    height: auto;
+    overflow: auto; 
+    display: block; 
+  }
+
+  .background {
+    position: fixed; 
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .overlay {
+    position: fixed;
+    inset: 0;
+  }
+
+  .nav {
+    position: static;
+    padding: 16px 20px;
+    left: auto; right: auto; top: auto;
+    gap: 12px;
+  }
+  .nav .logo { font-size: 18px; }
+  .nav .links a { margin-left: 14px; }
+
+  .form-container {
+    width: min(520px, 88vw);
+    height: auto;
+    margin: 10vh auto 6vh;
+    padding: 24px;
+    backdrop-filter: blur(2px);
+  }
+
+  .form-container h2 {
+    font-size: clamp(24px, 3vw, 28px);
+  }
+
+  .input-group input {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+
+  .buttons { gap: 12px; }
+  .btn-primary { padding: 12px 16px; font-size: 16px; }
+
+  #error-message { margin-top: 12px; }
+  
+  .footer img {
+    position: fixed;
+    bottom: 16px;
+    left: auto;
+    right: 16px;
+    transform: none;
+    width: 72px;
+    max-width: 22vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 8px;
+    padding: 12px;
+  }
+  .nav .links a { margin: 0 8px; display: inline-block; }
+
+  .form-container {
+    width: min(460px, 92vw);
+    margin: 12vh auto 8vh;
+    padding: 18px;
+    border-radius: 14px;
+  }
+
+  .form-container h4 { font-size: 12px; }
+  .form-container .login-text { margin-bottom: 16px; }
+
+  .input-group { margin-bottom: 16px; }
+  .input-group label { font-size: 13px; }
+
+  .btn-primary { width: 100%; }
+
+  .footer img {
+    right: 12px;
+    bottom: 12px;
+    width: 64px;
+  }
+}

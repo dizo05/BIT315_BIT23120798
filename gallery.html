@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GALLERY</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="gallery.css">
+        <script src="home.js"></script>
+    </head>
+    <body>
+        <div class="background"></div>
+  <div class="overlay"></div>
+
+        <div class="header">
+            <h1 onclick="location.href='home.html'">UNILUS</h1>
+        </div>
+        <div class="topnav">
+            <button onclick="toggleSidebar()" class="menu-btn">☰</button>
+            <h2>GALLERY</h2>
+            <section class="welcome">
+                <p id="dateTime"></p>
+            </section>
+        </div>
+<div class="leftcolumn" id="sidebar">
+    <h1>Current User: BIT23120798</h1>
+    <img src="IMG_0751.JPG" alt="Profile Photo">
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="inspiration.html">Inspirations</a></li>
+
+  <li class="dropdown">
+    <button class="dropbtn">Results ▾</button>
+    <div class="dropdown-content">
+      <a href="year1.html">Year 1</a>
+      <a href="year2.html">Year 2</a>
+      <a href="year3.html">Year 3</a>
+      <a href="year4.html">Year 4</a>
+    </div>
+  </li>
+
+  <li><a href="gallery.html">Gallery</a></li>
+</ul>
+<button class="logout-btn" onclick="location.href='index.html'">Logout</button>
+</div>
+            <div class="grid-container">
+                <p id="gallery-intro"></p>
+                <section class="gallery">
+                    <div class="polaroid">
+                        <img src="IMG_2187 2.jpeg" alt="Image 1">
+                        <div class="caption"><h2>Samfya</h2>
+                        <p>Jul 5, 2025. 18:00</p></div>
+                    </div>
+                    </section>
+                    <section class="gallery">
+                    <div class="polaroid">
+                        <img src="IMG_2135 2.jpeg" alt="Image 2">
+                        <div class="caption"><h2>Luapula</h2>
+                        <p>Jul 5, 2025. 13:13</p></div>
+                    </div>
+                    </section>
+                    <selection class="gallery">
+                    <div class="polaroid">
+                        <img src="IMG_2441 2.jpeg" alt="Image 3">
+                        <div class="caption"><h2>Mwense</h2>
+                        <p>Jul 8, 2025. 07:50</p></div>
+                    </div>
+                    </selection>
+                    <selection class="gallery">
+                    <div class="polaroid2">
+                        <img src="IMG_2459 2.jpeg" alt="Image 4">
+                        <div class="caption"><h2> Mwense</h2>
+                        <p>Jul 8, 2025. 08:05</p></div>
+                    </div>
+                    </selection>
+                    <selection class="gallery">
+                    <div class="polaroid2">
+                        <img src="IMG_2428.jpeg" alt="Image 5">
+                        <div class="caption"><h2>Mwense</h2>
+                        <p>Jul 8, 2025. 07:31</p></div>
+                    </div>
+                    </selection>
+                    <selection class="gallery">
+                    <div class="polaroid2">
+                        <img src="IMG_2151.jpeg" alt="Image 6">
+                        <div class="caption"><h2>Chembe</h2>
+                        <p>Jul 5, 2025. 13:18</p></div>
+                    </div>
+                    </selection>
+                </section>
+            </div>
+                        <script>
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  sidebar.classList.add("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    sidebar.classList.contains("active") &&
+    !sidebar.contains(e.target) &&
+    e.target !== menuBtn
+  ) {
+    sidebar.classList.remove("active");
+  }
+});
+
+const text = "A collection of memorable moments captured during my travels around the country, showcasing the vibrant Zambian life, and the beautiful surroundings that make this Country special.";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("gallery-intro").textContent += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 50); // typing speed (ms)
+  }
+}
+
+window.onload = typeEffect;
+
+</script>
+
+            <footer>
+                <p>&copy; 2025 Dingaane Miti. All rights reserved.</p>
+            </footer>
+    </body>
+</html>
+

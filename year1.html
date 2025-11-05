@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YEAR 1 RESULTS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="year.css">
+        <script src="home.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 onclick="location.href='home.html'">UNILUS</h1>
+        </div>
+        <div class="topnav">
+            <button onclick="toggleSidebar()" class="menu-btn">☰</button>
+            <h2>1st Year Results</h2>
+            <section class="welcome">
+                <p id="dateTime"></p>
+            </section>
+        </div>
+<div class="leftcolumn" id="sidebar">
+    <h1>Current User: BIT23120798</h1>
+    <img src="IMG_0751.JPG" alt="Profile Photo">
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="profile.html">Profile</a></li>
+  <li><a href="inspiration.html">Inspirations</a></li>
+
+  <li class="dropdown">
+    <button class="dropbtn">Results ▾</button>
+    <div class="dropdown-content">
+      <a href="year1.html">Year 1</a>
+      <a href="year2.html">Year 2</a>
+      <a href="year3.html">Year 3</a>
+      <a href="year4.html">Year 4</a>
+    </div>
+  </li>
+
+  <li><a href="gallery.html">Gallery</a></li>
+</ul>
+<button class="logout-btn" onclick="location.href='index.html'">Logout</button>
+</div>
+            <div class="grid-container">
+                <section class="yr-sem">
+                <h2>1st Year, 1st Semester</h2>
+                <table>
+                    <tr>
+                        <th>Course Code</th>
+                        <th>Course Name</th>
+                        <th>Credits</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr>
+                        <td>BIT101</td>
+                        <td>Business Information Systems</td>
+                        <td>3</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>BBA141</td>
+                        <td>Communication Skills</td>
+                        <td>4</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr>
+                        <td>BIT110</td>
+                        <td>Computer Systems Architecture</td>
+                        <td>3</td>
+                        <td>A-</td>
+                    </tr>
+                    <tr>
+                        <td>BIT102</td>
+                        <td>Computer Mathematics</td>
+                        <td>2</td>
+                        <td>B</td>
+                    </tr>
+                </table>
+                <p><strong>GPA:</strong> 3.4</p>
+                <p><strong>Completed Credits:</strong> 12</p>
+                </section>    
+                <section class="yr-sem2">
+                    <h2>1st Year, 2nd Semester</h2>
+                    <table>
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Credits</th>
+                            <th>Grade</th>
+                        </tr>
+                        <tr>
+                            <td>BIT107</td>
+                            <td>Operating System Processes and Services</td>
+                            <td>4</td>
+                            <td>A-</td>
+                        </tr>
+                        <tr>
+                            <td>BIT112</td>
+                            <td>Programming Concepts</td>
+                            <td>3</td>
+                            <td>B+</td>
+                        </tr>
+                        <tr>
+                            <td>BIT121</td>
+                            <td>Data and Information Management</td>
+                            <td>3</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>BBA140</td>
+                            <td>Business Environment</td>
+                            <td>2</td>
+                            <td>A</td>
+                        </tr>
+                    </table>
+                     <p><strong>GPA:</strong> 3.4</p>
+                     <p><strong>Completed Credits:</strong> 12</p>
+                     <p><strong>Total Completed Credits:</strong> 24</p>
+                     <p><strong>Cumulative GPA:</strong> 3.4</p>
+                </section>      
+            </div>
+            <script>
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); 
+  sidebar.classList.add("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    sidebar.classList.contains("active") &&
+    !sidebar.contains(e.target) &&
+    e.target !== menuBtn
+  ) {
+    sidebar.classList.remove("active");
+  }
+});
+
+</script>
+
+            <footer>
+                <p>&copy; 2025 Dingaane Miti. All rights reserved</p>
+            </footer>
